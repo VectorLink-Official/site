@@ -42,7 +42,7 @@
       radial-gradient(ellipse 700px 450px at -8% 35%, rgba(120,26,57,0.12), transparent 60%);
     pointer-events:none; z-index:0;
   }
-  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 48px; position:relative; z-index:1;}
   h1,h2,h3{font-family:'Shippori Mincho', serif; font-weight:600; letter-spacing:0.02em;}
   .eyebrow{
     font-family:'Oswald', sans-serif; font-weight:600; font-size:12.5px;
@@ -59,7 +59,7 @@
     background:rgba(10,8,16,0.82); backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line);
   }
-  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--maxw); margin:0 auto;}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 48px; max-width:var(--maxw); margin:0 auto;}
   .logo{font-family:'Shippori Mincho',serif; font-weight:600; font-size:19px; display:flex; align-items:center; gap:11px; letter-spacing:0.03em;}
   .logo img{width:30px; height:30px; border-radius:8px; display:block;}
   .navlinks{display:flex; gap:34px; font-size:14.5px; color:var(--dust);}
@@ -156,6 +156,7 @@
   .plan .pbtn{display:block; text-align:center; padding:14px; border-radius:3px; font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.03em; border:1px solid var(--line-strong);}
   .plan.reco .pbtn{background:var(--grad); color:#fff; border:none;}
   .plan-note{margin-top:14px; font-size:11px; color:var(--dust); line-height:1.6;}
+  .plan-catch{font-size:12px; color:var(--dust); line-height:1.6; margin-bottom:16px; margin-top:-8px;}
   @media(max-width:980px){ .plans{grid-template-columns:1fr;} }
 
   .flow{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
@@ -371,8 +372,9 @@
           <li>固定種目でのトレーニング記録</li>
           <li>チーム全体の目標値設定</li>
           <li>総合指数・歴代ベスト管理</li>
-          <li>メッセージ機能</li>
+          <li>コーチ↔選手間のメッセージ機能</li>
         </ul>
+        <p class="plan-catch">個人とチームの記録管理に特化したスタンダードプラン。</p>
         <a class="pbtn" href="#contact">このプランで相談する</a>
       </div>
       <div class="plan reco">
@@ -387,6 +389,7 @@
           <li>学年・ポジション別グループ管理</li>
           <li>グループ単位での目標値設定</li>
         </ul>
+        <p class="plan-catch">競争・分析・グループ運用まで対応した本格プラン。</p>
         <a class="pbtn" href="#contact">このプランで相談する</a>
       </div>
       <div class="plan">
