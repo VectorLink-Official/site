@@ -109,6 +109,8 @@
   .shot .cap .de{font-size:13px; color:var(--dust); line-height:1.7;}
   @media(max-width:900px){ .gallery{column-count:2;} }
   @media(max-width:600px){ .gallery{column-count:1;} }
+  .shot-target-imgs{display:grid; grid-template-columns:1fr 1fr;}
+  .shot-target-imgs img{width:100%; display:block;}
 
   .strip{border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:34px 0;}
   .strip .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center;}
@@ -315,32 +317,31 @@
     </div>
     <div class="gallery reveal">
       <div class="shot">
-        <img src="dashboard.jpg" alt="今日の状況ダッシュボード">
+        <img src="shots/dashboard.jpg" alt="今日の状況ダッシュボード">
         <div class="cap"><div class="ti">DASHBOARD</div><div class="de">今日の報告状況がひと目でわかる、コーチ向けダッシュボード。</div></div>
       </div>
       <div class="shot">
-        <img src="ranking.jpg" alt="ランキング画面">
+        <img src="shots/ranking.jpg" alt="ランキング画面">
         <div class="cap"><div class="ti">RANKING</div><div class="de">当日・歴代最高の2軸でランキングを表示。総合指数やグループでの絞り込みも可能。</div></div>
       </div>
       <div class="shot">
-        <img src="group-create.jpg" alt="グループ作成画面">
+        <img src="shots/group-create.jpg" alt="グループ作成画面">
         <div class="cap"><div class="ti">GROUP</div><div class="de">メンバーをチェックで選択し、グループに追加できます。</div></div>
       </div>
-      <div class="shot">
-        <img src="team-target.jpg" alt="目標値設定画面">
-        <div class="cap"><div class="ti">TARGET</div><div class="de">体重・体脂肪率など、項目ごとの目標値と停滞判定日数を設定。</div></div>
+      <div class="shot shot-target">
+        <div class="shot-target-imgs">
+          <img src="shots/team-target-1.jpg" alt="チーム全体の目標値設定">
+          <img src="shots/team-target-2.jpg" alt="グループの目標値設定">
+        </div>
+        <div class="cap"><div class="ti">TARGET</div><div class="de">チーム全体・グループ別に、種目ごとの目標値と停滞判定日数を設定。</div></div>
       </div>
       <div class="shot">
-        <img src="stats-detail.jpg" alt="歴代ベスト記録の詳細">
-        <div class="cap"><div class="ti">RECORDS</div><div class="de">選手ごとの歴代最高データを、種目別に一覧表示します。</div></div>
+        <img src="shots/urge-message.jpg" alt="個人票メッセージ画面">
+        <div class="cap"><div class="ti">MESSAGE</div><div class="de">選手ごとの個人票から、直接メッセージを送信できます。</div></div>
       </div>
       <div class="shot">
-        <img src="urge-message.jpg" alt="催促メッセージ送信画面">
-        <div class="cap"><div class="ti">MESSAGE</div><div class="de">催促したい選手を選んでメッセージを送信。本文を自由に編集できます。</div></div>
-      </div>
-      <div class="shot">
-        <img src="settings-group.jpg" alt="設定画面のグループ管理">
-        <div class="cap"><div class="ti">SETTINGS</div><div class="de">グループの確認・追加もこの画面から行えます。</div></div>
+        <img src="shots/settings-group.jpg" alt="設定画面">
+        <div class="cap"><div class="ti">SETTINGS</div><div class="de">グループ管理・目標値設定をこの画面からまとめて行えます。</div></div>
       </div>
     </div>
   </div>
