@@ -189,6 +189,19 @@
   .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
   @media (prefers-reduced-motion: reduce){ .reveal{opacity:1; transform:none; transition:none;} .grow{transition:none;} }
+
+  #to-top{
+    position:fixed; bottom:28px; right:28px; z-index:100;
+    width:44px; height:44px; border-radius:50%;
+    background:var(--grad); border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none;
+    transition:opacity .3s ease, transform .3s ease;
+    box-shadow:0 4px 16px rgba(208,29,70,0.4);
+  }
+  #to-top.show{opacity:1; pointer-events:auto;}
+  #to-top:hover{transform:translateY(-3px);}
+  #to-top svg{width:18px; height:18px; fill:none; stroke:#fff; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round;}
 </style>
 </head>
 <body>
@@ -198,7 +211,6 @@
     <div class="logo"><img src="logo.png" alt="Vector Link">Vector Link</div>
     <nav class="navlinks">
       <a href="#feature">機能</a>
-      <a href="#index">総合指数</a>
       <a href="#plan">料金</a>
       <a href="#flow">導入の流れ</a>
     </nav>
@@ -405,8 +417,8 @@
           <li>AIによる選手フィジカル評価</li>
           <li>優先サポート対応</li>
         </ul>
+        <p class="plan-catch">種目カスタマイズとAI評価に対応した最上位プラン。※順次提供予定</p>
         <a class="pbtn" href="#contact">このプランで相談する</a>
-        <div class="plan-note">※種目カスタマイズ・AI評価は順次提供予定の機能です</div>
       </div>
     </div>
   </div>
@@ -461,6 +473,10 @@
   </div>
 </footer>
 
+<button id="to-top" aria-label="ページのトップへ戻る" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -474,6 +490,11 @@
   } else {
     document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
   }
+
+  const toTop = document.getElementById('to-top');
+  window.addEventListener('scroll', ()=>{
+    toTop.classList.toggle('show', window.scrollY > 400);
+  });
 </script>
 
 </body>
